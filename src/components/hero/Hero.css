@@ -1,0 +1,144 @@
+.heroMain {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 72px);
+    overflow-x: hidden;
+    background: radial-gradient(circle at 70%, #0c3250, #03162500);
+}
+
+.heroTitle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.heroTitleRow {
+    position: relative;
+    width: 100vw;
+}
+
+.heroTitleRow svg {
+    padding: 0 8px;
+}
+
+.heroTitleDeveloper {
+    height: 28vh;
+    aspect-ratio: 166 / 33;
+}
+
+.heroTitleAnd {
+    height: 20vh;
+    margin-top: -32px;
+    margin-bottom: 32px;
+}
+
+.heroTitleAnd svg {
+    transition: 500ms opacity 500ms;
+}
+
+.andInvisible svg {
+    opacity: 0;
+}
+
+.andVisible svg {
+    opacity: 1;
+}
+
+.heroTitleDesigner {
+    height: 28vh;
+    aspect-ratio: 29 / 7;
+}
+
+.heroText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slideInR {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slideInL {
+    from {
+        right: 100vw;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.outlineText {
+    top: 0;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.fillText {
+    top: 0;
+    z-index: 1;
+    transition: right 50ms linear;
+}
+
+.heroImage {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 5vw;
+    height: 80vh;
+    width: auto;
+    aspect-ratio: 57 / 62;
+    background-image: url("/public/jesse1.png");
+    background-size: cover;
+    background-position: right;
+}
+
+#outlineDev, #fillDev, #outlineAnd, #fillAnd, #outlineDes, #fillDes {
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .heroImage {
+        height: 60vh;
+        right: auto;
+        left: 20vw;
+    }
+
+    .heroTitle {
+        padding-top: 10vh;
+        justify-content: flex-start;
+        row-gap: 32px;
+    }
+
+    .heroTitleDeveloper, .heroTitleDesigner {
+        height: max-content;
+        width: 100%;
+    }
+
+    .heroTitleAnd {
+        height: 64px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #outlineDev, #outlineAnd, #outlineDes {
+        top: 0.5vh !important;
+        left: 0.5vw !important;
+    }
+
+    #fillDev, #fillAnd, #fillDes {
+        top: -0.5vh !important;
+        right: 0.5vw !important;
+    }
+}

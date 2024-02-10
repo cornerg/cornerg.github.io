@@ -1,0 +1,115 @@
+.workMain {
+    width: 100%;
+    max-width: 1920px;
+    height: max-content;
+    min-height: calc(100vh - 72px);
+    padding: 16px;
+    margin: 72px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.divider {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobileCategName {
+    display: none;
+    width: max-content;
+    height: max-content;
+}
+
+.dividerLine {
+    width: auto;
+    flex-grow: 1;
+    height: 1px;
+    background: var(--body);
+}
+
+.workList {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.workPreview {
+    min-width: 280px;
+    width: 280px;
+    max-width: 480px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border: 2px solid var(--backgroundAlt);
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.previewOverlay {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 200ms;
+}
+
+.workPreview:hover .previewOverlay {
+    opacity: 1;
+}
+
+.previewTitle {
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    text-align: center;
+    color: var(--body);
+    text-shadow: 0 0 4px var(--background);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.codepen {
+    height: 300px;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--body);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.cp_embed_wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-height: 800px) {
+    .mobileCategName {
+        display: inline;
+    }
+}

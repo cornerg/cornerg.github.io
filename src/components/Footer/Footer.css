@@ -1,0 +1,109 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    max-height: 64px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 101;
+    transition: bottom 200ms ease-out;
+    background: linear-gradient(to top, #000000CC, transparent);
+}
+
+.footer p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.buttonCredits {
+    text-align: right;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.buttonCredits:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.popupCredits {
+    width: 480px;
+    max-width: calc(100vw - 16px);
+    height: max-content;
+    max-height: calc(100% - 16px);
+    padding: 16px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--backgroundAlt);
+    border-radius: 8px;
+    box-shadow: 1px 1px 16px 1px #00000080;
+    overflow-y: auto;
+}
+
+.popupHead {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.popupTitle {
+    text-align: left;
+}
+
+.popupCloseCredits {
+    width: 24px;
+    height: 24px;
+    flex-grow: 0;
+    stroke: var(--body);
+    cursor: pointer;
+    transition: stroke 200ms;
+}
+
+.popupCloseCredits:hover {
+    stroke: var(--primary);
+}
+
+.creditsList {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.credit {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px 16px;
+    flex-wrap: wrap;
+}
+
+.credit p {
+    width: max-content;
+    flex-grow: 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.credit p:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}

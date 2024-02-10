@@ -1,0 +1,196 @@
+.aboutMain {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 72px);
+    top: 72px;
+    background: var(--backgroundAlt);
+}
+
+.scrollContainer {
+    position: fixed;
+    top: 72px;
+    width: 110vw;
+    height: calc(100vh - 72px);
+    z-index: 99;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    opacity: 0;
+}
+
+.scrollHeight {
+    width: 64px;
+    height: 600vh;
+}
+
+.cardContainer {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.aboutCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 500ms ease-out;
+}
+
+.cardOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: color-mix(in srgb, var(--background) 80%, transparent);
+    backdrop-filter: blur(6px);
+}
+
+.cardContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 350px);
+    min-width: 280px;
+    height: 100%;
+    padding: 16px 16px 16px 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8vh;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 500ms ease-out;
+}
+
+.cardContent h2 {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+    height: max-content;
+    color: var(--primary);
+    text-shadow: 1px 1px 8px #000000;
+}
+
+.cardContent p strong {
+    color: var(--primary);
+    text-shadow: 0 0 8px #00000080;
+}
+
+.cardContent p {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 50vw;
+    max-width: 768px;
+}
+
+.activeContent {
+    opacity: 1;
+    z-index: 2;
+}
+
+.aboutNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: max-content;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8vh;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.navEntry {
+    width: max-content;
+    min-width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    pointer-events: all;
+    cursor: pointer;
+    transition: color 200ms ease-out;
+}
+
+.navEntry h1 {
+    width: max-content;
+    min-width: 100%;
+    color: inherit;
+    text-align: right;
+    font-size: 2rem;
+    transition: font-size 200ms ease-out;
+}
+
+.activeEntry h1 {
+    font-size: 2.5rem;
+}
+
+.dot {
+    height: 24px;
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: background-color 200ms ease-out, height 200ms ease-out;
+}
+
+.activeEntry .dot {
+    height: 30px;
+}
+
+@media only screen and (max-height: 800px),
+only screen and (max-width: 720px) {
+    .scrollContainer {
+        display: none;
+    }
+
+    .cardContainer {
+        height: max-content;
+        min-height: calc(100vh - 72px);
+    }
+
+    .aboutCard {
+        min-height: calc(100vh - 72px);
+        height: max-content;
+        overflow-y: scroll;
+    }
+
+    .cardContent {
+        min-height: 100%;
+        height: max-content;
+        width: 90vw;
+        padding: 16px 5vw;
+        gap: 4vh;
+    }
+
+    .cardContent h2 {
+        font-size: 1.5rem;
+    }
+
+    .cardContent p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .aboutNav {
+        padding-right: 16px;
+    }
+
+    .navEntry h1 {
+        display: none;
+    }
+}

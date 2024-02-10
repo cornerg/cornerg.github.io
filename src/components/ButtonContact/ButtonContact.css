@@ -1,0 +1,73 @@
+.contactButton {
+    position: relative;
+    width: max-content;
+    height: 36px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid color-mix(in srgb, var(--primary) 75%, transparent);
+    box-shadow: 0 0 0 0 transparent;
+    color: color-mix(in srgb, var(--primary) 75%, transparent);
+    background: transparent;
+    user-select: none;
+    cursor: pointer;
+    transition: box-shadow 200ms, border-color 200ms, color 200ms, background 200ms;
+}
+
+.contactButton:hover, .contactButtonActive {
+    color: var(--body);
+    border-color: var(--primary);
+    box-shadow: 0 0 16px 3px color-mix(in srgb, var(--primary) 75%, transparent);
+}
+
+.contactButtonActive {
+    color: var(--background) !important;
+    background: var(--primary);
+}
+
+.contactDropdown {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    top: 0;
+    left: 0;
+    background: var(--backgroundAlt);
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    cursor: auto;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: top 200ms, opacity 150ms;
+}
+
+.contactIcon {
+    width: 24px;
+    height: auto;
+    aspect-ratio: 1;
+    fill: var(--body);
+    cursor: pointer;
+    pointer-events: all;
+    transition: fill 200ms;
+}
+
+.iconEnvelope:hover {
+    fill: var(--primary);
+}
+
+.iconLinkedIn:hover {
+    fill: #0a66c2;
+}
+
+.iconDribbble:hover {
+    fill: #E74D89;
+}

@@ -1,0 +1,102 @@
+.certMain {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    min-height: calc(100vh - 72px);
+    top: 72px;
+    padding: 32px 8vw;
+    background: radial-gradient(circle at 70%, #0c3250, #03162500);
+}
+
+.certList {
+    width: 100%;
+    height: max-content;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.certificate {
+    width: 100%;
+    height: max-content;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5vw;
+    background: transparent;
+    border-radius: 0 16px 16px 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+.certificate:hover {
+    background: color-mix(in srgb, var(--primary) 50%, transparent);
+}
+
+.certImage {
+    width: 20%;
+    min-width: 120px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.certContent {
+    width: calc(80% - 5vw);
+    height: max-content;
+    padding: 16px 16px 16px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.certContent h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    text-shadow: 0 0 4px #000000;
+}
+
+.certDate {
+    font-size: 1rem;
+    color: #FFFFFFAA;
+}
+
+.certDescription {
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .certMain {
+        padding: 16px 8px;
+    }
+
+    .certificate {
+        padding: 8px;
+        border-radius: 16px;
+        border: 2px solid var(--background);
+    }
+
+    .certImage {
+        display: none;
+    }
+
+    .certContent {
+        padding: 0;
+    }
+
+    .certContent h2 {
+        font-size: 1.5rem;
+    }
+}

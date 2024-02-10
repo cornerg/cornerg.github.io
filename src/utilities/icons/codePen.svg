@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;">
+<polyline style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" points="11,14 1,7.6 
+	1,14.4 11,20.8 "/>
+<polyline style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" points="21,14.4 11,20.8 
+	11,14 21,7.6 "/>
+<polyline style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" points="11,8 21,14.4 
+	21,7.6 11,1.2 "/>
+<polyline style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" points="1,14.4 11,8 
+	11,1.2 1,7.6 "/>
+</svg>
