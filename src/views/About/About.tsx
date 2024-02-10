@@ -1,6 +1,5 @@
 import './About.css';
-import React, {SyntheticEvent} from 'react';
-import {AccessData} from "../../contexts/contexts";
+import React from 'react';
 import {card} from "../../models/types";
 
 export default function About() {
@@ -8,7 +7,6 @@ export default function About() {
     const [lastScrollPos, setLastScrollPos] = React.useState(0);
     const [blockScroll, setBlockScroll] = React.useState(false);
 
-    let {reduceMotion, setReduceMotion} = React.useContext(AccessData);
     let cards: Array<card> = [
         {index: 0, background: "/about/aboutMe.jpg", title: "Hey, it's me", heading: "Hey there, I'm Jesse.<br /> I design and develop attention-grabbing web apps", body: "I have certification and experience as a graphic designer and web developer. I have spent much of my life exposed to and working with computers, and have a passion for finding creative solutions through clean design and code<br /><br />I differentiate myself through an obsessive attention to detail and expectation for quality in everything I do. I enjoy figuring out how to bring ideas to life and build whatever can be visualized through clever use of fundamental tools."},
         {index: 1, background: "/about/aboutDeveloper.jpg", title: "Developer", heading: "Appealing front-ends, efficient back-ends,<br />with React, Electron, and more", body: "My career with development began from a desire to create the apps I visualized, and that has lead to a passion for building.<br /><br />I've had a basic understanding of HTML and CSS since an early age, and my first job involved working creating apps with low-code platforms like <strong>Bubble.io and Backendless</strong>. This exposed me to the app creation process, but limited what was possible with code.<br /><br />I expanded my development knowledge with online courses, personal projects, and taking on programming tasks at work, which at the time was mostly design. I've taken courses in <strong>HTML, CSS, JavaScript,</strong> and began building full apps with <strong>React.js</strong>, integrating <strong>TypeScript</strong> when possible.<br /><br />At this point I have created countless web apps, developed browser extensions and plugins, and lead the development of a standalone Electron application."},

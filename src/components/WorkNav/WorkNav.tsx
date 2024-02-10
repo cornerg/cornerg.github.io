@@ -1,6 +1,6 @@
 import './WorkNav.css';
 import React from 'react';
-import {WorkObject, WorkCategory} from "../../models/types";
+import {WorkCategory} from "../../models/types";
 import {workCategories} from "../../views/work/Work";
 
 interface WorkNavProps {active: WorkCategory, setCategory: React.Dispatch<React.SetStateAction<WorkCategory>>}

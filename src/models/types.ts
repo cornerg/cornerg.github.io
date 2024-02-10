@@ -1,4 +1,4 @@
-import {ReactComponentElement, ReactElement} from "react";
+import {ReactElement} from "react";
 
 export type WorkObject = {
     title: string,

@@ -19,7 +19,6 @@ export default function Footer() {
     const [showCredits, setShowCredits] = React.useState(false);
 
     function togglePopup(newState: boolean) {
-        console.log("togglePopup")
         const popup = document.getElementById("creditsPopup");
 
         if(popup) {
@@ -36,6 +35,8 @@ export default function Footer() {
                     popup.style.display = "none"
                 }, 230)
             }
+
+            setShowCredits(newState);
         }
     }
 

@@ -1,7 +1,6 @@
 import './Work.css';
 import React from 'react';
 import WorkNav from "../../components/WorkNav/WorkNav";
-import {AccessData} from "../../contexts/contexts";
 import WorkDetails from "../../components/workDetails/WorkDetails";
 import {WorkObject, WorkCategory} from "../../models/types";
 import {WebDev, CodePen, Wireframe, Icons, Modeling, Photography} from "../../utilities/icons";
@@ -348,9 +347,6 @@ export const workCategories: Array<WorkCategory> = [
 export default function Work() {
     let [openCategory, setOpenCategory] = React.useState<WorkCategory>(workCategories[0]);
     let [openWork, setOpenWork] = React.useState<WorkObject | null>(null);
-    const [showPopup, setShowPopup] = React.useState(false);
-
-    let {reduceMotion, setReduceMotion} = React.useContext(AccessData);
 
     React.useEffect(() => {
         if(document) {
@@ -394,7 +390,7 @@ export default function Work() {
                     return <div
                         key={`workList-${index}`}
                         className={"workPreview"}
-                        onClick={() => {togglePopup(!showPopup, work)}}
+                        onClick={() => {togglePopup(!openWork, work)}}
                         style={{backgroundImage: `url(${work.preview})`}}
                     >
                         <div className={"previewOverlay"} style={{background: `${openCategory.color}53`}}>
