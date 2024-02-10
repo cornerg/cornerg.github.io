@@ -311,7 +311,7 @@ export const workCategories: Array<WorkCategory> = [
             {
                 title: "Spring Blossoms",
                 date: 1618076680000,
-                preview: "/work/photography/photoButtercups.png",
+                preview: "/work/photography/photoButtercups.jpg",
                 description: "",
                 images: [],
                 codePenEmbed: null
